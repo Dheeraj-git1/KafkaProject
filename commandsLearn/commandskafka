@@ -1,0 +1,9 @@
+Server
+
+
+Topics
+ go to bin/windows inside of kafka 
+1. Create -> ./kafka-topics.bat --create --topic topic1 --partitions 3 --replication-factor 3 --bootstrap-server localhost:9092
+2. list -> ./kafka-topics.bat --list --bootstrap-server localhost:9092
+3. describe -> ./kafka-topics.bat --describe --bootstrap-server localhost:9092
+4. delete -> ./kafka-topics.bat --delete --topic  topic1 --bootstrap-server localhost:9092 ( check config for delete.topic.enable = true)
