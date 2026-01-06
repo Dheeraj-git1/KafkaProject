@@ -7,3 +7,15 @@ Topics
 2. list -> ./kafka-topics.bat --list --bootstrap-server localhost:9092
 3. describe -> ./kafka-topics.bat --describe --bootstrap-server localhost:9092
 4. delete -> ./kafka-topics.bat --delete --topic  topic1 --bootstrap-server localhost:9092 ( check config for delete.topic.enable = true)
+
+Producer
+1. producer send message -> ./kafka-console-producer.sh --bootstrap-server localhost:9092 --topic product-created-events-topic
+2. producer send message with key -> ./kafka-console-producer.sh --bootstrap-server localhost:9092 --topic product-created-events-topic --property "parse.key=true" --property "key.seperator=:"
+
+
+Consumer
+1. from beginning -> ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic product-created-events-topic --from-beginning
+2. from beginning with key -> ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic product-created-events-topic --from-beginning --property "print.key=true"
+3. new messages -> ./kafka-console-consumer.sh --topic my-topic --bootstrap-server localhost:9092
+
+to consume in order. producer has to send in unique key so that it will go to same partition
