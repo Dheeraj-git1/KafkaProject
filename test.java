@@ -224,6 +224,21 @@ if(!s.add(a[i])){
         System.out.println( s.toArray());
 
     }
+
+    public static void countEachVowel(String str){
+
+        HashMap<Character,Integer> res = new HashMap<>();
+        HashSet<Character> vow = new HashSet<>(
+            Arrays.asList('a','e','i','o','u')
+        );
+        for(char c : str.trim().toCharArray()){
+            if(vow.contains(c)){
+                res.put(c, res.getOrDefault(c, 0)+1);
+            }
+        }
+        str.trim().toLowerCase().chars();
+        System.out.println(res.toString());
+    }
     public static void main(String[] args) {
         // test t = new test();
         // int[] i = { 4, 1, 2, 3, 3, 4, 5 };
@@ -245,6 +260,10 @@ if(!s.add(a[i])){
 
         int[] k = {12,1,4,5,8,1};
         longCon(k);
+        
+        countEachVowel("antbbccee ant");
     }
+
+
 }
 
