@@ -1,6 +1,7 @@
+package DSA;
 import java.util.*;
 
-public class test3 {
+public class dfs_node {
 
     static List<Integer>[] graph;
     static int[] val;

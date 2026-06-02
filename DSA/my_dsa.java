@@ -1,6 +1,7 @@
+package DSA;
 import java.util.*;
 
-public class test {
+public class my_dsa {
 
     // public static void main(String[] args) {
     // List<Integer> list = new ArrayList<>();

@@ -1,3 +1,4 @@
+package DSA;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,7 +8,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Stack;
 
-public class Learnd {
+public class Learndsa {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -321,7 +322,7 @@ public List<List<Integer>> threeSum(int[] nums) {
     public static void main(String args[]) {
         int[] li = new int[] { 1, 7, 9, 3, 2 };
         int target = 5;
-        Learnd l = new Learnd();
+        Learndsa l = new Learndsa();
         int[] a = l.twoSum(li, target);
         System.out.println(a[0] + " " + a[1]);
 
